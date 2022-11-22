@@ -1,0 +1,31 @@
+{
+  "name": "wrsbmkg-mstdn",
+  "version": "1.0.0",
+  "description": "Bot mastodon tidak resmi WRS-BMKG yang bekerja untuk menerima peringatan gempa bumi di Indonesia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yonle/wrsbmkg-mstdn.git"
+  },
+  "keywords": [
+    "mastodon",
+    "wrsbmkg",
+    "bmkg",
+    "gempa"
+  ],
+  "author": "Yonle <yonle@duck.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Yonle/wrsbmkg-mstdn/issues"
+  },
+  "homepage": "https://github.com/Yonle/wrsbmkg-mstdn#readme",
+  "dependencies": {
+    "masto": "^4.6.6",
+    "miniget": "^4.2.2",
+    "wrs-bmkg": "^1.0.0"
+  }
+}
