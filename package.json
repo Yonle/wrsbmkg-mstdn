@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Yonle/wrsbmkg-mstdn#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "masto": "^4.6.6",
     "miniget": "^4.2.2",
     "wrs-bmkg": "^1.0.0"
