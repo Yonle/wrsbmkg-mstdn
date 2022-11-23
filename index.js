@@ -11,7 +11,7 @@ let posts = 0;
 async function post(t, etc) {
   //if (!(posts >= 3)) return posts++;
   return await masto.statuses.create({
-    status: t + "\n#Indonesia #Gempa",
+    status: t,
     visibility: process.env.VISIBILITY || "unlisted",
   });
 }
