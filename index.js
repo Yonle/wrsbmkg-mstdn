@@ -11,7 +11,7 @@ let posts = 0;
 async function post(t, etc) {
   //if (!(posts >= 3)) return posts++;
   return await masto.statuses.create({
-    status: t,
+    status: t + "\n#wrsbmkg #gempabot",
     visibility: process.env.VISIBILITY || "unlisted",
   });
 }
@@ -74,9 +74,9 @@ wrs.on("realtime", (msg) => {
   ];
 
   if (Number(msg.properties.mag) >= 7)
-    text.unshift("Peringatan: Gempa berskala M >= 7" + text);
+    text.unshift("Peringatan: Gempa berskala M >= 7");
   else if (Number(msg.properties.mag) >= 6)
-    text.unshift("Peringatan: Gempa berskala M >= 6" + text);
+    text.unshift("Peringatan: Gempa berskala M >= 6");
   else if (Number(msg.properties.mag) >= 5)
     text.push("\nPeringatan: Gempa berskala M >= 5");
 
