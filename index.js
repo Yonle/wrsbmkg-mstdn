@@ -70,7 +70,7 @@ wrs.on("realtime", (msg) => {
         timeZone: "Asia/Jakarta",
       })} (WIB)`,
     "Magnitudo : " + Number(msg.properties.mag).toFixed(1),
-    "Koordinat : " + msg.geometry.coordinates.join(" "),
+    "Koordinat : " + msg.geometry.coordinates.reverse().join(", "),
   ];
 
   if (Number(msg.properties.mag) >= 7)
