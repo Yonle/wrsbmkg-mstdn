@@ -62,6 +62,7 @@ wrs.on("Gempabumi", async (msg) => {
 });
 
 wrs.on("realtime", (msg) => {
+  msg.geometry.coordinates.pop();
   let text = [
     msg.properties.place,
     "Tanggal   : " + new Date(msg.properties.time).toLocaleDateString("id"),
