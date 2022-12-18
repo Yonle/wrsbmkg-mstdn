@@ -8,11 +8,12 @@ let wrs = WRSBMKG();
 
 let posts = 0;
 
-async function post(t, etc) {
+async function post(t, etc = {}, eStr = "") {
   //if (!(posts >= 3)) return posts++;
   return await masto.statuses.create({
-    status: t + "\n#wrsbmkg #gempabot",
+    status: t + "\n#wrsbmkg #gempabot " + eStr,
     visibility: process.env.VISIBILITY || "unlisted",
+    ...etc
   });
 }
 
@@ -81,7 +82,7 @@ wrs.on("realtime", (msg) => {
   else if (Number(msg.properties.mag) >= 5)
     text.push("\nPeringatan: Gempa berskala M >= 5");
 
-  post(text.join("\n"));
+  post(text.join("\n"), {}, "#gempaM" + Math.floor(msg.properties.mag));
 });
 
 async function Login() {
